@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-class Article {
+class TestArticle {
   final String text;
   final String url;
   final String by;
@@ -8,7 +8,7 @@ class Article {
   final int score;
   final int commentsCount;
 
-  const Article(
+  const TestArticle(
       {this.text,
         this.url,
         this.by,
