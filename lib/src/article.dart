@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-class TestArticle {
+class Articletest {
   final String text;
   final String url;
   final String by;
@@ -8,18 +8,18 @@ class TestArticle {
   final int score;
   final int commentsCount;
 
-  const TestArticle(
+  const Articletest(
       {this.text,
         this.url,
         this.by,
         this.time,
         this.score,
         this.commentsCount});
-  factory Article.fromJson(Map<String, dynamic> json){
+  factory Articletest.fromJson(Map<String, dynamic> json){
     if(json==null){
       return null;
     }
-    return Article(
+    return Articletest(
       text: json['test'] ?? null,
       url: json['url'],
       by: json['by'],
@@ -35,15 +35,15 @@ class TestArticle {
     final listOfIds = List<int>.from(parsed);
     return listOfIds;
    }
- Article parseArticle(String jsonStr){
+ Articletest parseArticle(String jsonStr){
     final parsed= json.decode(jsonStr);
-    final article = Article.fromJson(parsed);
+    final article = Articletest.fromJson(parsed);
     return article;
  }
 }
 
 final articles = [
-  new Article(
+  new Articletest(
     text:
     "Circular Shock Acoustic Waves in Ionosphere Triggered by Launch of Formosat‐5",
     url: "wiley.com",
@@ -52,7 +52,7 @@ final articles = [
     score: 177,
     commentsCount: 62,
   ),
-  new Article(
+  new Articletest(
     text: "BMW says electric car mass production not viable until 2020",
     url: "reuters.com",
     by: "Mononokay",
@@ -60,7 +60,7 @@ final articles = [
     score: 81,
     commentsCount: 128,
   ),
-  new Article(
+  new Articletest(
     text: "Evolution Is the New Deep Learning",
     url: "sentient.ai",
     by: "jonbaer",
@@ -68,7 +68,7 @@ final articles = [
     score: 200,
     commentsCount: 87,
   ),
-  new Article(
+  new Articletest(
     text: "TCP Tracepoints have arrived in Linux",
     url: "brendangregg.com",
     by: "brendangregg",
@@ -76,7 +76,7 @@ final articles = [
     score: 35,
     commentsCount: 0,
   ),
-  new Article(
+  new Articletest(
     text:
     "Section 230: A Key Legal Shield for Facebook, Google Is About to Change",
     url: "npr.org",
@@ -85,7 +85,7 @@ final articles = [
     score: 156,
     commentsCount: 66,
   ),
-  new Article(
+  new Articletest(
     text: "A Visiting Star Jostled Our Solar System 70,000 Years Ago",
     url: "gizmodo.com",
     by: "rbanffy",
@@ -93,7 +93,7 @@ final articles = [
     score: 175,
     commentsCount: 60,
   ),
-  new Article(
+  new Articletest(
     text: "Cow Game Extracted Facebook Data",
     url: "theatlantic.com",
     by: "jameshart",
@@ -101,7 +101,7 @@ final articles = [
     score: 125,
     commentsCount: 56,
   ),
-  new Article(
+  new Articletest(
     text: "Ask HN: How do you find freelance work?",
     url: "",
     by: "i_am_nobody",
@@ -109,7 +109,7 @@ final articles = [
     score: 82,
     commentsCount: 43,
   ),
-  new Article(
+  new Articletest(
     text:
     "Hedge-fund managers that do the most research will post the best returns",
     url: "cnbc.com",
@@ -118,7 +118,7 @@ final articles = [
     score: 149,
     commentsCount: 126,
   ),
-  new Article(
+  new Articletest(
     text:
     "Number systems of the world, sorted by complexity of counting (2006)",
     url: "airnet.ne.jp",
@@ -127,7 +127,7 @@ final articles = [
     score: 196,
     commentsCount: 90,
   ),
-  new Article(
+  new Articletest(
     text: "MIT’s new device can pull water from desert air",
     url: "techcrunch.com",
     by: "evo_9",
@@ -135,7 +135,7 @@ final articles = [
     score: 11,
     commentsCount: 11,
   ),
-  new Article(
+  new Articletest(
     text: "GitLab 10.6 released with CI/CD for GitHub",
     url: "gitlab.com",
     by: "rbanffy",
@@ -143,7 +143,7 @@ final articles = [
     score: 177,
     commentsCount: 62,
   ),
-  new Article(
+  new Articletest(
     text: "Next-Gen Display: MicroLEDs",
     url: "ieee.org",
     by: "rbanffy",
@@ -151,7 +151,7 @@ final articles = [
     score: 72,
     commentsCount: 39,
   ),
-  new Article(
+  new Articletest(
     text:
     "Power 9 May Dent X86 Servers: Alibaba, Google, Tencent Test IBM Systems",
     url: "eetimes.com",
@@ -160,7 +160,7 @@ final articles = [
     score: 52,
     commentsCount: 50,
   ),
-  new Article(
+  new Articletest(
     text:
     "Show HN: Transfer files to mobile device by scanning a QR code from the terminal",
     url: "github.com",
@@ -169,7 +169,7 @@ final articles = [
     score: 143,
     commentsCount: 35,
   ),
-  new Article(
+  new Articletest(
     text: "Types of People Startups Should Hire, but Don’t",
     url: "trifinlabs.com",
     by: "Shanerostad",
@@ -177,7 +177,7 @@ final articles = [
     score: 31,
     commentsCount: 27,
   ),
-  new Article(
+  new Articletest(
     text: "Steinhaus Longimeter",
     url: "fairfield.edu",
     by: "ColinWright",
@@ -185,7 +185,7 @@ final articles = [
     score: 85,
     commentsCount: 16,
   ),
-  new Article(
+  new Articletest(
     text:
     "Data on 1.2M Facebook users from 2005 (2011) [use archive.org url in thread]",
     url: "michaelzimmer.org",
@@ -194,7 +194,7 @@ final articles = [
     score: 72,
     commentsCount: 19,
   ),
-  new Article(
+  new Articletest(
     text: "The Myth of Authenticity Is Killing Tex-Mex",
     url: "eater.com",
     by: "samclemens",
@@ -202,7 +202,7 @@ final articles = [
     score: 121,
     commentsCount: 128,
   ),
-  new Article(
+  new Articletest(
     text: "Show HN: Asynchronous HTTP/2 client for Python 2.7",
     url: "github.com",
     by: "vsmhn",
@@ -210,7 +210,7 @@ final articles = [
     score: 75,
     commentsCount: 51,
   ),
-  new Article(
+  new Articletest(
     text: "Fractions in the Farey Sequences and the Stern-Brocot Tree",
     url: "surrey.ac.uk",
     by: "fanf2",
@@ -218,7 +218,7 @@ final articles = [
     score: 45,
     commentsCount: 7,
   ),
-  new Article(
+  new Articletest(
     text: "Understanding CPU port contention",
     url: "dendibakh.github.io",
     by: "matt_d",
@@ -226,7 +226,7 @@ final articles = [
     score: 96,
     commentsCount: 13,
   ),
-  new Article(
+  new Articletest(
     text:
     "Krita 4.0 – A painting app for cartoonists, illustrators, and concept artists",
     url: "krita.org",
@@ -235,7 +235,7 @@ final articles = [
     score: 435,
     commentsCount: 125,
   ),
-  new Article(
+  new Articletest(
     text: "Cutting ‘Old Heads’ at IBM",
     url: "propublica.org",
     by: "mwexler",
@@ -243,7 +243,7 @@ final articles = [
     score: 287,
     commentsCount: 240,
   ),
-  new Article(
+  new Articletest(
     text: "Where to Score: Classified Ads from Haight-Ashbury",
     url: "theparisreview.org",
     by: "tintinnabula",
@@ -251,7 +251,7 @@ final articles = [
     score: 47,
     commentsCount: 12,
   ),
-  new Article(
+  new Articletest(
     text:
     "TravisBuddy: Adds comments to failed pull requests, tells author what went wrong",
     url: "github.com",
@@ -260,7 +260,7 @@ final articles = [
     score: 37,
     commentsCount: 26,
   ),
-  new Article(
+  new Articletest(
     text: "Using Technical Debt in Your Favor",
     url: "gitconnected.com",
     by: "treyhuffine",

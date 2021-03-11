@@ -8,7 +8,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List<Article> _articles =articles;
+  List<Articletest> _articles =articles;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-  Widget _buildItem( Article article){
+  Widget _buildItem( Articletest article){
 
     return Padding(
       key: Key(article.text),

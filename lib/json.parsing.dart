@@ -1,7 +1,6 @@
-
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
-    part 'json.parsing.g.dart';
+part 'json.parsing.g.dart';
 
 
 abstract class Article implements Built<Article, ArticleBuilder> {
@@ -11,7 +10,7 @@ abstract class Article implements Built<Article, ArticleBuilder> {
   String get by;
   int get time;
   String get text;
-   bool get dead;
+  bool get dead;
   int get parent;
   int get poll;
   BuiltList<int> get kids;
@@ -29,5 +28,5 @@ List<int> parseTopStories(String jsonStr){
   return [];
 }
 Article parseArticle(String jsonStr){
-   return null;
+  return null;
 }
